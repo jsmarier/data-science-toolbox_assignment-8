@@ -393,19 +393,18 @@ title="Print to PDF"
 <section id="importing-data-with-pd-read">
 <h2>Importing Data With pd.read<a class="headerlink" href="#importing-data-with-pd-read" title="Permalink to this headline">#</a></h2>
 <p>To import the CSV into a Jupyter Notebook with Python, we need to run the code below in a code cell. We will name our dataset <code class="docutils literal notranslate"><span class="pre">permits</span></code>. This code will also display the first five rows thanks to <code class="docutils literal notranslate"><span class="pre">.head()</span></code>.</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span>import pandas as pd
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
 
-permits = pd.read_csv(&#39;https://raw.githubusercontent.com/jsmarier/course-datasets/main/ottawa-building-permits-2021.csv&#39;)
+<span class="n">permits</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;https://raw.githubusercontent.com/jsmarier/course-datasets/main/ottawa-building-permits-2021.csv&#39;</span><span class="p">)</span>
 
-permits.head()
-
-![A screen capture of the first five rows of the permits dataset after importation.](images/2022-12-11_Ass-8_head-of-permits-dataset.png)
-
+<span class="n">permits</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
 </pre></div>
 </div>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>Since this page was created in the Markdown (.md) format, the code above is static. However, we will run the same code in our Understanding Data and Delivering Data Jupyter Notebooks.</p>
+<p><img alt="A screen capture of the first five rows of the permits dataset after importation." src="_images/2022-12-11_Ass-8_head-of-permits-dataset.png" /></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
+```{note}
+Since this page was created in the Markdown (.md) format, the code above is static. However, we will run the same code in our Understanding Data and Delivering Data Jupyter Notebooks.
+</pre></div>
 </div>
 <p>As this point, we could already do some basic math operations, such as calculating the <code class="docutils literal notranslate"><span class="pre">sum</span></code> and <code class="docutils literal notranslate"><span class="pre">mean</span></code> of the <code class="docutils literal notranslate"><span class="pre">FT2</span></code> column. This will give us an estimate of the square footage of the construction and demolition projects on the City of Ottawa’s territory in 2021. Here are the functions expressed in <span class="math notranslate nohighlight">\(\LaTeX\)</span> and Python. <strong>PUT REFERENCE TO MODULE 7 AND THE RESOURCES FROM ASSIGNMENT 7</strong>.</p>
 <p><strong>Sum</strong></p>

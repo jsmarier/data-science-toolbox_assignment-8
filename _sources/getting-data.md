@@ -24,6 +24,7 @@ import pandas as pd
 permits = pd.read_csv('https://raw.githubusercontent.com/jsmarier/course-datasets/main/ottawa-building-permits-2021.csv')
 
 permits.head()
+```
 
 ![A screen capture of the first five rows of the permits dataset after importation.](images/2022-12-11_Ass-8_head-of-permits-dataset.png)
 
