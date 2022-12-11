@@ -3,7 +3,14 @@
 
 format: jb-book
 root: intro
-chapters:
-- file: markdown
-- file: notebooks
-- file: markdown-notebooks
+parts:
+  - caption: Getting Data
+    chapters:
+    - file: getting-data
+  - caption: Understanding Data
+    chapters:
+    - file: understanding-data-vimo
+    - file: understanding-data-eda
+  - caption: Delivering Data
+    chapters:
+    - file: delivering-data
