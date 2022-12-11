@@ -20,5 +20,7 @@ In the following pages, I will demonstrate how my new Python and data science sk
 
 For this "Proof of concept," I will reuse chuncks of code from my final project I submitted in May 2021 for the Data Visualization course.
 
+Here are the main sections of this Jupyter Lab:
+
 ```{tableofcontents}
 ```
