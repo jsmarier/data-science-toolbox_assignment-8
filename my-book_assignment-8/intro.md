@@ -1,11 +1,8 @@
 # Welcome to your Jupyter Book
 
-This is a small sample book to give you a feel for how book content is
-structured.
-It shows off a few of the major file types, as well as some sample content.
-It does not go in-depth into any particular topic - check out [the Jupyter Book documentation](https://jupyterbook.org) for more information.
+This Jupyter Book is my capstone project for FS041F22O The Data Science Toolbox. This course is part of the [Key Capabilities in Data Science](https://extendedlearning.ubc.ca/programs/key-capabilities-data-science) program offered by UBC Extended Learning.
 
-Check out the content pages bundled with this sample book to see more.
+In this Jupyter Book, I will compare the skills and techniques I learned throughout this program to the Google Sheets-based data analysis workflow I currently use with my own student at the University of Ottawa and Carleton University.
 
 ```{tableofcontents}
 ```
