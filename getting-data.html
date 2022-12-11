@@ -50,6 +50,8 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="Understanding Data: VIMO Analysis" href="understanding-data-vimo.html" />
@@ -308,12 +310,41 @@ title="Print to PDF"
     </ul>
   </div>
 </div>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
 
     </div>
 </div>
 
 <!-- Table of contents -->
 <div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#importing-data-with-pd-read">
+   Importing Data With pd.read
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#importing-data-with-importdata-or-the-import-option-in-google-sheets">
+   Importing Data With IMPORTDATA or the Import Option in Google Sheets
+  </a>
+ </li>
+</ul>
+
+    </nav>
 </div>
     </div>
     <div class="article row">
@@ -325,6 +356,24 @@ title="Print to PDF"
                 <div id="print-main-content">
                     <div id="jb-print-toc">
                         
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#importing-data-with-pd-read">
+   Importing Data With pd.read
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#importing-data-with-importdata-or-the-import-option-in-google-sheets">
+   Importing Data With IMPORTDATA or the Import Option in Google Sheets
+  </a>
+ </li>
+</ul>
+
+                        </nav>
                     </div>
                 </div>
             </div>
@@ -332,11 +381,73 @@ title="Print to PDF"
                 
               <div>
                 
-  <section class="tex2jax_ignore mathjax_ignore" id="getting-data">
+  <p>#Each Markdown file should contain at least four of the following five components</p>
+<p><strong>2 block math equations</strong></p>
+<p><strong>2 code blocks</strong></p>
+<p>2 image files</p>
+<p><strong>2 admonitions</strong></p>
+<p>1 margin content</p>
+<section class="tex2jax_ignore mathjax_ignore" id="getting-data">
 <h1>Getting Data<a class="headerlink" href="#getting-data" title="Permalink to this headline">#</a></h1>
+<p>Whether we use Python or Google Sheets, the first step of our project is to import data. For the purpose of this experiment, we will use a CSV version of a City of Ottawa dataset (ADD LINK TO SOURCE) listing the building, demolition, and pool enclosure permits delivered in 2021. The CSV file is <a class="reference external" href="https://raw.githubusercontent.com/jsmarier/course-datasets/main/ottawa-building-permits-2021.csv">available here</a>.</p>
+<section id="importing-data-with-pd-read">
+<h2>Importing Data With pd.read<a class="headerlink" href="#importing-data-with-pd-read" title="Permalink to this headline">#</a></h2>
+<p>To import the CSV into a Jupyter Notebook with Python, we need to run the code below in a code cell. We will name our dataset <code class="docutils literal notranslate"><span class="pre">permits</span></code>. This code will also display the first five rows thanks to <code class="docutils literal notranslate"><span class="pre">.head()</span></code>.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span>import pandas as pd
+
+permits = pd.read_csv(&#39;https://raw.githubusercontent.com/jsmarier/course-datasets/main/ottawa-building-permits-2021.csv&#39;)
+
+permits.head()
+
+![A screen capture of the first five rows of the permits dataset after importation.](images/2022-12-11_Ass-8_head-of-permits-dataset.png)
+
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Since this page was created in the Markdown (.md) format, the code above is static. However, we will run the same code in our Understanding Data and Delivering Data Jupyter Notebooks.</p>
+</div>
+<p>As this point, we could already do some basic math operations, such as calculating the <code class="docutils literal notranslate"><span class="pre">sum</span></code> and <code class="docutils literal notranslate"><span class="pre">mean</span></code> of the <code class="docutils literal notranslate"><span class="pre">FT2</span></code> column. This will give us an estimate of the square footage of the construction and demolition projects on the City of Ottawa’s territory in 2021. Here are the functions expressed in <span class="math notranslate nohighlight">\(\LaTeX\)</span> and Python. <strong>PUT REFERENCE TO MODULE 7 AND THE RESOURCES FROM ASSIGNMENT 7</strong>.</p>
+<p><strong>Sum</strong></p>
+<p><span class="math notranslate nohighlight">\(\LaTeX\)</span></p>
+<div class="math notranslate nohighlight">
+\[
+\Sigma
+=
+x_1+x_2 +
+\dots + x_n
+\]</div>
+<p><em>Python</em></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">permits</span><span class="p">[</span><span class="s1">&#39;FT2&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
+</pre></div>
+</div>
+<p><strong>Average</strong></p>
+<p><span class="math notranslate nohighlight">\(\LaTeX\)</span></p>
+<div class="math notranslate nohighlight">
+\[
+\bar{x}
+=
+\frac{x_1 + x_2 + \dots + x+n}{n}
+\]</div>
+<p><em>Python</em></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">permits</span><span class="p">[</span><span class="s1">&#39;FT2&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
+</pre></div>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Since I have worked with this dataset in the past, I know that there are some duplicates. These duplicates were created by city staff on purpose in order to individually list the various street addresses attached to the same permit number, for example in the case of row houses. Therefore, at this point, our sum and average functions will include these duplicates.</p>
+</div>
+</section>
+<section id="importing-data-with-importdata-or-the-import-option-in-google-sheets">
+<h2>Importing Data With IMPORTDATA or the Import Option in Google Sheets<a class="headerlink" href="#importing-data-with-importdata-or-the-import-option-in-google-sheets" title="Permalink to this headline">#</a></h2>
 <p>Demonstrate, with Markdown and images, how importing a <code class="docutils literal notranslate"><span class="pre">CSV</span></code> dataset works with Python and Google Sheets.</p>
 <p>Mention that I will be running the Python code in code cells in the Understanding Data and Delivering Data sections.</p>
 <p>See Module 8.3 at 3:03 to include figures.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Google Sheets’s IMPORTDATA function does not work with larger files. In this case, you need to first download the CSV to your hard drive. Then, in Google Sheets, click on File &gt; Import. When the “Import file” window appears, select “Upload.” Then, upload your CSV, making sure to select the appropriate value separator.</p>
+</div>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
