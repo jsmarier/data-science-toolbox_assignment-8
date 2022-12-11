@@ -25,7 +25,7 @@ permits = pd.read_csv('https://raw.githubusercontent.com/jsmarier/course-dataset
 
 permits.head()
 
-![A screen capture of the first five rows of the permits dataset after importation.](images/2022-12-11_Ass-8_head-of-permits-dataset)
+![A screen capture of the first five rows of the permits dataset after importation.](images/2022-12-11_Ass-8_head-of-permits-dataset.png)
 
 ```
 
