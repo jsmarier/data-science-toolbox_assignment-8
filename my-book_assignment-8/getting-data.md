@@ -36,10 +36,6 @@ FIG: TO BE ADDED
 
 ## Obtaining Summary Information About the Dataset
 
-```{margin} Who's the winner?
-As we just saw here, Google Sheets is perhaps a little bit easier to use. However, Python can handle much larger files.
-```
-
 We can easily get more information about the different columns in our dataset by running the following Python code:
 
 ```python
@@ -50,12 +46,17 @@ permits.info()
 
 FIG: The .info() function returned a table showing the number of non-null values in each column, as well as the type of variable of each column.
 
+```{margin} This needs some cleaning...
+We have yet to clean this dataset. Among other things, the VALUE column needs to be converted from object to int64.
+```
+
 We can obtain similar information about a column in Google Sheets by using the "Column stats" tool found under Data > Column stats. The contextual window on the right will show, among other things, the total number of rows, as well as the number of empty cells in the column.
 
 ![Screen capture of the column stats window showing that there are two empty cells under the FT2 column.](images/2022-12-11_ass-8_column-stats-empty-cells.png)
 
 FIG: TO BE ADDED
 
-```{warning}
-We have yet to clean this dataset. Among other things, the VALUE column needs to be converted from object to int64.
-```
+:::{admonition} Who's the winner?
+:class: tip, dropdown
+As we just saw here, Google Sheets is perhaps a little bit easier to use. However, Python can handle much larger files.
+:::
