@@ -20,6 +20,8 @@ In the following pages, I will demonstrate how my new Python and data science sk
 
 For this "Proof of concept," I will use the same dataset I assigned to my students a few weeks ago for their data analysis project.
 
+**Disclaimer:** Throughout this assignment, I reused and customized chunks of code from some of my previous final projects for this program, as well as techniques thought in the various modules of all four courses offered through the program.
+
 ```{warning}
 I encountered an unknown "parsing" error when importing my dataset with pd.read_csv. Therefore, the depth of my data analysis in this assignment is rather limited. I hope that I nonetheless managed to showcase some of my new skills, such as creating a Jupyter Book and deploying it via GitHub Pages.
 ```
