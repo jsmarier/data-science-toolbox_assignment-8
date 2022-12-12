@@ -1,22 +1,10 @@
-#Each Markdown file should contain at least four of the following five components
-
-**2 block math equations**
-
-**2 code blocks**
-
-2 image files
-
-**2 admonitions**
-
-1 margin content
-
 # Getting Data
 
-Whether we use Python or Google Sheets, the first step of our project is to import data. For the purpose of this experiment, we will use a CSV version of a City of Ottawa dataset (ADD LINK TO SOURCE) listing the building, demolition, and pool enclosure permits delivered in 2021. The CSV file is [available here](https://raw.githubusercontent.com/jsmarier/course-datasets/main/ottawa-building-permits-2021.csv).
+Whether we use Python or Google Sheets, the first step of our project is to import data. For the purpose of this experiment, we will use a `CSV` version of a City of Ottawa dataset (ADD LINK TO SOURCE) listing the building, demolition, and pool enclosure permits delivered in 2021. The `CSV` file is [available here](https://raw.githubusercontent.com/jsmarier/course-datasets/main/ottawa-building-permits-2021.csv).
 
-## Importing Data With pd.read
+## Importing the Data
 
-To import the CSV into a Jupyter Notebook with Python, we need to run the code below in a code cell. We will name our dataset `permits`. This code will also display the first five rows thanks to `.head()`.
+To import the `CSV` into a Jupyter Notebook with Python, we need to run the code below in a code cell. We will name our dataset `permits`. This code will also display the first five rows thanks to `.head()`.
 
 ```python
 import pandas as pd
@@ -26,63 +14,48 @@ permits = pd.read_csv('https://raw.githubusercontent.com/jsmarier/course-dataset
 permits.head()
 ```
 
-![A screen capture of the first five rows of the permits dataset after importation.](images/2022-12-11_Ass-8_head-of-permits-dataset.png)
+![Screen capture of the first five rows of the permits dataset after importation.](images/2022-12-11_ass-8_head-of-permits-dataset.png)
 
-```
+FIG: TO BE ADDED
 
 ```{note}
-Since this page was created in the Markdown (.md) format, the code above is static. However, we will run the same code in our Understanding Data and Delivering Data Jupyter Notebooks.
+Since this page was created in the Markdown (.md) format, the code above is static. However, we will run the same code in our Understanding Data: VIMO Analysis and Delivering Data Jupyter Notebooks.
 ```
 
-As this point, we could already do some basic math operations, such as calculating the `sum` and `mean` of the `FT2` column. This will give us an estimate of the square footage of the construction and demolition projects on the City of Ottawa's territory in 2021. Here are the functions expressed in $\LaTeX$ and Python. **PUT REFERENCE TO MODULE 7 AND THE RESOURCES FROM ASSIGNMENT 7**.
+Let's now see what we need to do to complete the same steps in Google Sheets. The easiest way of importing a `CSV` file with Google Sheets is to use the IMPORTDATA function. For our current dataset, it would look like this:
 
-**Sum**
+```
+=IMPORTDATA("https://raw.githubusercontent.com/jsmarier/course-datasets/main/ottawa-building-permits-2021.csv")
+```
 
-$\LaTeX$
+However, this function does not work with larger files. In this case, we need to first download the `CSV` to our hard drive. Then, in Google Sheets, we click on File > Import. When the "Import file" window appears, we select "Upload." Then, we upload our CSV, making sure to select the appropriate value separator. Here's what the dataset looks like in Google Sheets right after importation.
 
-$$
-\Sigma
-=
-x_1+x_2 +
-\dots + x_n
-$$
+![Screen capture of the dataset right after being imported into Google Sheets.](images/2022-12-11_ass-8_importation-into-google-sheets.png)
 
-*Python*
+FIG: TO BE ADDED
+
+## Obtaining Summary Information About the Dataset
+
+```{margin} Who's the winner?
+As we just saw here, Google Sheets is perhaps a little bit easier to use. However, Python can handle much larger files.
+```
+
+We can easily get more information about the different columns in our dataset by running the following Python code:
 
 ```python
-permits['FT2'].sum()
+permits.info()
 ```
 
-**Average**
+![Screen capture of the summary table showing, among other things, the number of non-null values.](images/2022-12-11_ass-8_permits-info.png)
 
-$\LaTeX$
+FIG: The .info() function returned a table showing the number of non-null values in each column, as well as the type of variable of each column.
 
-$$
-\bar{x}
-=
-\frac{x_1 + x_2 + \dots + x+n}{n}
-$$
+We can obtain similar information about a column in Google Sheets by using the "Column stats" tool found under Data > Column stats. The contextual window on the right will show, among other things, the total number of rows, as well as the number of empty cells in the column.
 
-*Python*
+![Screen capture of the column stats window showing that there are two empty cells under the FT2 column.](images/2022-12-11_ass-8_column-stats-empty-cells.png)
 
-```python
-permits['FT2'].mean()
-```
-
-
+FIG: TO BE ADDED
 
 ```{warning}
-Since I have worked with this dataset in the past, I know that there are some duplicates. These duplicates were created by city staff on purpose in order to individually list the various street addresses attached to the same permit number, for example in the case of row houses. Therefore, at this point, our sum and average functions will include these duplicates.
-```
-
-## Importing Data With IMPORTDATA or the Import Option in Google Sheets
-
-Demonstrate, with Markdown and images, how importing a `CSV` dataset works with Python and Google Sheets.
-
-Mention that I will be running the Python code in code cells in the Understanding Data and Delivering Data sections.
-
-See Module 8.3 at 3:03 to include figures.
-
-```{warning}
-Google Sheets's IMPORTDATA function does not work with larger files. In this case, you need to first download the CSV to your hard drive. Then, in Google Sheets, click on File > Import. When the "Import file" window appears, select "Upload." Then, upload your CSV, making sure to select the appropriate value separator.
+We have yet to clean this dataset. Among other things, the VALUE column needs to be converted from object to int64.
 ```
