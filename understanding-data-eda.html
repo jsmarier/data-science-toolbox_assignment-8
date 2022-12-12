@@ -308,12 +308,41 @@ title="Print to PDF"
     </ul>
   </div>
 </div>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
 
     </div>
 </div>
 
 <!-- Table of contents -->
 <div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#groupby-vs-a-pivot-table">
+   .groupby VS a Pivot Table
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#exploratory-charts">
+   Exploratory Charts
+  </a>
+ </li>
+</ul>
+
+    </nav>
 </div>
     </div>
     <div class="article row">
@@ -325,6 +354,24 @@ title="Print to PDF"
                 <div id="print-main-content">
                     <div id="jb-print-toc">
                         
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#groupby-vs-a-pivot-table">
+   .groupby VS a Pivot Table
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#exploratory-charts">
+   Exploratory Charts
+  </a>
+ </li>
+</ul>
+
+                        </nav>
                     </div>
                 </div>
             </div>
@@ -334,9 +381,60 @@ title="Print to PDF"
                 
   <section class="tex2jax_ignore mathjax_ignore" id="understanding-data-exploratory-data-analysis-eda">
 <h1>Understanding Data: Exploratory Data Analysis (EDA)<a class="headerlink" href="#understanding-data-exploratory-data-analysis-eda" title="Permalink to this headline">#</a></h1>
-<p>Write a comparison of my analysis techniques.</p>
-<p>Screen capture of Google Sheets pivot table vs Python groupby
-Inclure a LaTeX summary of the math formulas</p>
+<p>The summary statistics and frequency distribution charts we just created help us have a better understanding of the data we are dealing with. In this section, I will compare my exploratory data analysis (EDA) process with Python and Google Sheets.</p>
+<section id="groupby-vs-a-pivot-table">
+<h2>.groupby VS a Pivot Table<a class="headerlink" href="#groupby-vs-a-pivot-table" title="Permalink to this headline">#</a></h2>
+<p>A very useful tool offered by the Pandas library is the <code class="docutils literal notranslate"><span class="pre">.groupy</span></code> function. It looks something like this:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">permits_grouped</span> <span class="o">=</span> <span class="n">permits</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s2">&quot;WARD&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">count</span><span class="p">()</span>
+
+<span class="n">permits_grouped</span>
+</pre></div>
+</div>
+<p>The code above generates a new table featuring the number of non=null (non empty) cells for each column, grouped by wards. Here’s what the first 10 rows of this table look like:</p>
+<p><img alt="Screen capture of the permits dataset grouped by wards." src="_images/2022-12-11_ass-8_groupby-ward-pandas.png" /></p>
+<p>FIGURE TO ADD</p>
+<p>Given the previously mentioned “parsing” error, I am unable to group my variables by other columns, such as VALUE, BLG TYPE (building type), etc. This would be useful, for example, to calculate the number of projects involving each building type (single family home, retail, industrial, rowhouse, etc.) in each ward.</p>
+<p>This is actually something rather easy to do with Google Sheets’s Pivot Table tool. Simply select the entire dataset and click on Insert &gt; Pivot table. Then, put <code class="docutils literal notranslate"><span class="pre">WARD</span></code> under the rows, <code class="docutils literal notranslate"><span class="pre">BLG</span> <span class="pre">TYPE</span></code> under the columns, and <code class="docutils literal notranslate"><span class="pre">BLG</span> <span class="pre">TYPE</span></code>, summarized by COUNTA, under values.</p>
+<p><img alt="Screen capture of the pivot table in Google Sheets, showing the number of projects involving each type of building in each ward." src="_images/2022-12-11_ass-8_pivot-table.png" />.</p>
+<p>FIGURE TO ADD</p>
+<div class="tip dropdown admonition">
+<p class="admonition-title">Who’s the winner?</p>
+<p>In theory, Python is much more powerful than Google Sheets. However, as we saw here, while the .groupby function is quite useful, solving “parsing” errors can require hours of work. I find the “what-you-see-is-what-you-get” approach embodied by Google Sheets a bit simpler.</p>
+</div>
+</section>
+<section id="exploratory-charts">
+<h2>Exploratory Charts<a class="headerlink" href="#exploratory-charts" title="Permalink to this headline">#</a></h2>
+<p>As we saw in the previous section, creating charts with <code class="docutils literal notranslate"><span class="pre">Altair</span></code> requires only a few lines of code. As a reminder, the code below can quickly and efficiently generate a frequency table (bar chart) of the number of projects per ward:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">altair</span> <span class="k">as</span> <span class="nn">alt</span>
+<span class="n">alt</span><span class="o">.</span><span class="n">data_transformers</span><span class="o">.</span><span class="n">disable_max_rows</span><span class="p">()</span>
+
+<span class="n">alt</span><span class="o">.</span><span class="n">Chart</span><span class="p">(</span><span class="n">permits</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="mi">500</span><span class="p">,</span> <span class="n">height</span><span class="o">=</span><span class="mi">400</span><span class="p">)</span><span class="o">.</span><span class="n">mark_bar</span><span class="p">()</span><span class="o">.</span><span class="n">encode</span><span class="p">(</span>
+    <span class="n">x</span><span class="o">=</span><span class="n">alt</span><span class="o">.</span><span class="n">X</span><span class="p">(</span><span class="s2">&quot;WARD:N&quot;</span><span class="p">,</span> <span class="n">sort</span><span class="o">=</span><span class="s2">&quot;y&quot;</span><span class="p">,</span> <span class="n">title</span><span class="o">=</span><span class="s2">&quot;Ward&quot;</span><span class="p">),</span>
+    <span class="n">y</span><span class="o">=</span><span class="n">alt</span><span class="o">.</span><span class="n">Y</span><span class="p">(</span><span class="s1">&#39;count()&#39;</span><span class="p">,</span> <span class="n">title</span><span class="o">=</span><span class="s2">&quot;Number of Projects&quot;</span><span class="p">))</span>
+</pre></div>
+</div>
+<p><img alt="Screen capture of the bar chart created with the code above." src="_images/2022-12-11_ass-8_pandas-frequency-table.png" /></p>
+<p>ADD FIGURE CAPTION</p>
+<p>In comparison, creating a similar chart with Google Sheets requires the following steps:</p>
+<ol class="simple">
+<li><p>Select D column</p></li>
+<li><p>Click on Insert &gt; Chart</p></li>
+<li><p>Click on “Aggregate” under X-axis in the chart editor</p></li>
+<li><p>Click on “Customize” in the top right corner</p></li>
+<li><p>Under “Chart &amp; axis titles,” select “Horizontal axis title” with the drop down menu</p></li>
+<li><p>Type “Ward” under “Title text”</p></li>
+<li><p>Select “Vertical axis title”</p></li>
+<li><p>Type “Number of Projects” under “Title text”</p></li>
+</ol>
+<p>And here’s the result:</p>
+<p><img alt="Screen capture of the bar chart created with Google Sheets." src="_images/2022-12-11_ass-8_google-sheets-chart.png" /></p>
+<p>FIGCAPTION TO ADD</p>
+<p>The level of difficulty here is similar to Altair’s. Moreover, both tools allow us to download a PNG or SVP copy of the chart by clicking on the three little dots in the top right corner.</p>
+<div class="tip dropdown admonition">
+<p class="admonition-title">Who’s the winner?</p>
+<p>Here, I will call a tie between Altair and Google Sheets. In the first case, creating an exploratory chart takes only a few lines of code. Likewise, we can create a similar chart with Google Sheets in under 10 clicks.</p>
+</div>
+</section>
 </section>
 
     <script type="text/x-thebe-config">

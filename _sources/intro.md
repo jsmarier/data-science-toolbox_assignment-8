@@ -18,7 +18,13 @@ In my teaching, I loosely follow the three prong approach found in *[The Data Jo
 
 In the following pages, I will demonstrate how my new Python and data science skills measure up against the Google-Sheets workflow I use for each of these steps.
 
-For this "Proof of concept," I will reuse chuncks of code from my final project I submitted in May 2021 for the Data Visualization course.
+For this "Proof of concept," I will use the same dataset I assigned to my students a few weeks ago for their data analysis project.
+
+**Disclaimer:** Throughout this assignment, I reused and customized chunks of code from some of my previous final projects for this program, as well as techniques thought in the various modules of all four courses offered through the program.
+
+```{warning}
+I encountered an unknown "parsing" error when importing my dataset with pd.read_csv. Therefore, the depth of my data analysis in this assignment is rather limited. I hope that I nonetheless managed to showcase some of my new skills, such as creating a Jupyter Book and deploying it via GitHub Pages.
+```
 
 Here are the main sections of this Jupyter Lab:
 
