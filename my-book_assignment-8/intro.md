@@ -20,6 +20,10 @@ In the following pages, I will demonstrate how my new Python and data science sk
 
 For this "Proof of concept," I will use the same dataset I assigned to my students a few weeks ago for their data analysis project.
 
+```{warning}
+I encountered an unknown "parsing" error when importing my dataset with pd.read_csv. Therefore, the depth of my data analysis in this assignment is rather limited. I hope that I nonetheless managed to showcase some of my new skills, such as creating a Jupyter Book and deploying it via GitHub Pages.
+```
+
 Here are the main sections of this Jupyter Lab:
 
 ```{tableofcontents}
