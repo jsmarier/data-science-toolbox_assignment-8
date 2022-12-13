@@ -109,7 +109,7 @@ const thebe_selector_output = ".output, .cell_output"
         <ul class="nav bd-sidenav bd-sidenav__home-link">
             <li class="toctree-l1">
                 <a class="reference internal" href="intro.html">
-                    Welcome to My Jupyter Book for Assignment 8
+                    Welcome to My Jupyter Book for Ass 8
                 </a>
             </li>
         </ul>
@@ -393,7 +393,7 @@ title="Print to PDF"
                 
   <section class="tex2jax_ignore mathjax_ignore" id="understanding-data-exploratory-data-analysis-eda">
 <h1>Understanding Data: Exploratory Data Analysis (EDA)<a class="headerlink" href="#understanding-data-exploratory-data-analysis-eda" title="Permalink to this headline">#</a></h1>
-<p>The summary statistics and frequency distribution charts we just created help us have a better understanding of the data we are dealing with. In this section, I will compare my exploratory data analysis (EDA) process with Python and Google Sheets.</p>
+<p>The summary statistics and frequency distribution charts we just created help us have a better understanding of the data we are dealing with. In this section, I will compare my exploratory data analysis (EDA) process with <code class="docutils literal notranslate"><span class="pre">Python</span></code> and <code class="docutils literal notranslate"><span class="pre">Google</span> <span class="pre">Sheets</span></code>.</p>
 <section id="groupby-vs-a-pivot-table">
 <h2>.groupby VS a Pivot Table<a class="headerlink" href="#groupby-vs-a-pivot-table" title="Permalink to this headline">#</a></h2>
 <p>A very useful tool offered by the Pandas library is the <code class="docutils literal notranslate"><span class="pre">.groupy</span></code> function. It looks something like this:</p>
@@ -414,8 +414,8 @@ title="Print to PDF"
 <p class="sidebar-title">A messy dataset…</p>
 <p>As previously mentioned, this dataset requires some cleaning, which falls outside the scope of this assignment. Therefore, the figures presented here include duplicate rows and are only shown as a demonstration of my current skills.</p>
 </aside>
-<p>Given the previously mentioned “parsing” error, I am unable to group my variables by other columns, such as VALUE, BLG TYPE (building type), etc. This would be useful, for example, to calculate the number of projects involving each building type (single family home, retail, industrial, rowhouse, etc.) in each ward.</p>
-<p>This is actually something rather easy to do with Google Sheets’s Pivot Table tool. Simply select the entire dataset and click on Insert &gt; Pivot table. Then, put <code class="docutils literal notranslate"><span class="pre">WARD</span></code> under the rows, <code class="docutils literal notranslate"><span class="pre">BLG</span> <span class="pre">TYPE</span></code> under the columns, and <code class="docutils literal notranslate"><span class="pre">BLG</span> <span class="pre">TYPE</span></code>, summarized by COUNTA, under values.</p>
+<p>Given the previously mentioned “parsing” error, I am unable to group my variables by other columns, such as <code class="docutils literal notranslate"><span class="pre">VALUE</span></code>, <code class="docutils literal notranslate"><span class="pre">BLG</span> <span class="pre">TYPE</span></code> (building type), etc. This would be useful, for example, to calculate the number of projects involving each building type (single family home, retail, industrial, rowhouse, etc.) in each ward.</p>
+<p>This is actually something rather easy to do with <code class="docutils literal notranslate"><span class="pre">Google</span> <span class="pre">Sheets</span></code>’ pivot table tool. Simply select the entire dataset and click on Insert &gt; Pivot table. Then, put <code class="docutils literal notranslate"><span class="pre">WARD</span></code> under the rows, <code class="docutils literal notranslate"><span class="pre">BLG</span> <span class="pre">TYPE</span></code> under the columns, and <code class="docutils literal notranslate"><span class="pre">BLG</span> <span class="pre">TYPE</span></code>, summarized by <code class="docutils literal notranslate"><span class="pre">COUNTA</span></code>, under values.</p>
 <figure class="align-default" id="pivot-table">
 <a class="reference internal image-reference" href="_images/2022-12-11_ass-8_pivot-table.png"><img alt="_images/2022-12-11_ass-8_pivot-table.png" src="_images/2022-12-11_ass-8_pivot-table.png" style="width: 700px;" /></a>
 <figcaption>
@@ -445,13 +445,13 @@ title="Print to PDF"
 </figcaption>
 </figure>
 <p>The bar chart seen in <a class="reference internal" href="#pandas-frequency-table"><span class="std std-numref">Fig. 12</span></a> was generated using the <code class="docutils literal notranslate"><span class="pre">Python</span></code> code above.</p>
-<p>In comparison, creating a similar chart with Google Sheets requires the following steps:</p>
+<p>In comparison, creating a similar chart with <code class="docutils literal notranslate"><span class="pre">Google</span> <span class="pre">Sheets</span></code> requires the following steps:</p>
 <ol class="simple">
 <li><p>Select D column</p></li>
 <li><p>Click on Insert &gt; Chart</p></li>
 <li><p>Click on “Aggregate” under X-axis in the chart editor</p></li>
 <li><p>Click on “Customize” in the top right corner</p></li>
-<li><p>Under “Chart &amp; axis titles,” select “Horizontal axis title” with the drop down menu</p></li>
+<li><p>Under “Chart &amp; axis titles,” select “Horizontal axis title” with the drop-down menu</p></li>
 <li><p>Type “Ward” under “Title text”</p></li>
 <li><p>Select “Vertical axis title”</p></li>
 <li><p>Type “Number of Projects” under “Title text”</p></li>
@@ -463,7 +463,7 @@ title="Print to PDF"
 <p><span class="caption-number">Fig. 13 </span><span class="caption-text">Screen capture of the bar chart created with Google Sheets.</span><a class="headerlink" href="#google-sheets-chart" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
-<p>The level of difficulty here is similar to Altair’s. Moreover, both tools allow us to download a PNG or SVP copy of the chart by clicking on the three little dots in the top right corner.</p>
+<p>The level of difficulty here is similar to <code class="docutils literal notranslate"><span class="pre">Altair</span></code>’s. Moreover, both tools allow us to download a <code class="docutils literal notranslate"><span class="pre">PNG</span></code> or <code class="docutils literal notranslate"><span class="pre">SVP</span></code> copy of the chart by clicking on the three little dots in the top right corner.</p>
 <div class="tip dropdown admonition">
 <p class="admonition-title">Who’s the winner?</p>
 <p>Here, I will call a tie between Altair and Google Sheets. In the first case, creating an exploratory chart takes only a few lines of code. Likewise, we can create a similar chart with Google Sheets in under 10 clicks.</p>

@@ -53,7 +53,7 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="Understanding Data: VIMO Analysis" href="understanding-data-vimo.html" />
-    <link rel="prev" title="Welcome to My Jupyter Book for Assignment 8" href="intro.html" />
+    <link rel="prev" title="Welcome to My Jupyter Book for Ass 8" href="intro.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -109,7 +109,7 @@ const thebe_selector_output = ".output, .cell_output"
         <ul class="nav bd-sidenav bd-sidenav__home-link">
             <li class="toctree-l1">
                 <a class="reference internal" href="intro.html">
-                    Welcome to My Jupyter Book for Assignment 8
+                    Welcome to My Jupyter Book for Ass 8
                 </a>
             </li>
         </ul>
@@ -393,10 +393,10 @@ title="Print to PDF"
                 
   <section class="tex2jax_ignore mathjax_ignore" id="getting-data">
 <h1>Getting Data<a class="headerlink" href="#getting-data" title="Permalink to this headline">#</a></h1>
-<p>Whether we use Python or Google Sheets, the first step of our project is to import data. For the purpose of this experiment, we will use a <code class="docutils literal notranslate"><span class="pre">CSV</span></code> version of a City of Ottawa dataset <span id="id1">[<a class="reference internal" href="bibliography.html#id2" title="Lyndsey Stuart and Debbie Kennedy. Construction, demolition, and pool enclosure permits monthly - 2021. 2022. URL: https://open.ottawa.ca/documents/construction-demolition-and-pool-enclosure-permits-monthly-2021/about.">SK22</a>]</span> listing the building, demolition, and pool enclosure permits delivered in 2021. The <code class="docutils literal notranslate"><span class="pre">CSV</span></code> file is <a class="reference external" href="https://raw.githubusercontent.com/jsmarier/course-datasets/main/ottawa-building-permits-2021.csv">available here</a>.</p>
+<p>Whether we use <code class="docutils literal notranslate"><span class="pre">Python</span></code> or <code class="docutils literal notranslate"><span class="pre">Google</span> <span class="pre">Sheets</span></code>, the first step of our project is to import data. For the purpose of this experiment, we will use a <code class="docutils literal notranslate"><span class="pre">CSV</span></code> version of a City of Ottawa dataset <span id="id1">[<a class="reference internal" href="bibliography.html#id2" title="Lyndsey Stuart and Debbie Kennedy. Construction, demolition, and pool enclosure permits monthly - 2021. 2022. URL: https://open.ottawa.ca/documents/construction-demolition-and-pool-enclosure-permits-monthly-2021/about.">SK22</a>]</span> listing the building, demolition, and pool enclosure permits delivered in 2021. The <code class="docutils literal notranslate"><span class="pre">CSV</span></code> file is <a class="reference external" href="https://raw.githubusercontent.com/jsmarier/course-datasets/main/ottawa-building-permits-2021.csv">available here</a>.</p>
 <section id="importing-the-data">
 <h2>Importing the Data<a class="headerlink" href="#importing-the-data" title="Permalink to this headline">#</a></h2>
-<p>To import the <code class="docutils literal notranslate"><span class="pre">CSV</span></code> into a Jupyter Notebook with Python, we need to run the code below in a code cell. We will name our dataset <code class="docutils literal notranslate"><span class="pre">permits</span></code>. This code will also display the first five rows thanks to <code class="docutils literal notranslate"><span class="pre">.head()</span></code>.</p>
+<p>To import the <code class="docutils literal notranslate"><span class="pre">CSV</span></code> into a <code class="docutils literal notranslate"><span class="pre">Jupyter</span> <span class="pre">Notebook</span></code> with <code class="docutils literal notranslate"><span class="pre">Python</span></code>, we need to run the code below in a code cell. We will name our dataset <code class="docutils literal notranslate"><span class="pre">permits</span></code>. This code will also display the first five rows thanks to <code class="docutils literal notranslate"><span class="pre">.head()</span></code>.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
 
 <span class="n">permits</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;https://raw.githubusercontent.com/jsmarier/course-datasets/main/ottawa-building-permits-2021.csv&#39;</span><span class="p">)</span>
@@ -415,11 +415,11 @@ title="Print to PDF"
 <p class="admonition-title">Note</p>
 <p>Since this page was created in the Markdown (.md) format, the code above is static. However, we will run the same code in our Understanding Data: VIMO Analysis and Delivering Data Jupyter Notebooks.</p>
 </div>
-<p>Let’s now see what we need to do to complete the same steps in Google Sheets. The easiest way of importing a <code class="docutils literal notranslate"><span class="pre">CSV</span></code> file with Google Sheets is to use the IMPORTDATA function. For our current dataset, it would look like this:</p>
+<p>Let’s now see what we need to do to complete the same steps in <code class="docutils literal notranslate"><span class="pre">Google</span> <span class="pre">Sheets</span></code>. The easiest way of importing a <code class="docutils literal notranslate"><span class="pre">CSV</span></code> file with <code class="docutils literal notranslate"><span class="pre">Google</span> <span class="pre">Sheets</span></code> is to use the IMPORTDATA function. For our current dataset, it would look like this:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">=</span><span class="n">IMPORTDATA</span><span class="p">(</span><span class="s2">&quot;https://raw.githubusercontent.com/jsmarier/course-datasets/main/ottawa-building-permits-2021.csv&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>However, this function does not work with larger files. In this case, we need to first download the <code class="docutils literal notranslate"><span class="pre">CSV</span></code> to our hard drive. Then, in Google Sheets, we click on File &gt; Import. When the “Import file” window appears, we select “Upload.” Then, we upload our CSV, making sure to select the appropriate value separator. Here’s what the dataset looks like in Google Sheets right after importation.</p>
+<p>However, this function does not work with larger files. In this case, we need to first download the <code class="docutils literal notranslate"><span class="pre">CSV</span></code> to our hard drive. Then, in <code class="docutils literal notranslate"><span class="pre">Google</span> <span class="pre">Sheets</span></code>, we click on File &gt; Import. When the “Import file” window appears, we select “Upload.” Then, we upload our <code class="docutils literal notranslate"><span class="pre">CSV</span></code>, making sure to select the appropriate value separator. Here’s what the dataset looks like in Google Sheets right after importation.</p>
 <figure class="align-default" id="importation-into-google-sheets">
 <a class="reference internal image-reference" href="_images/2022-12-11_ass-8_importation-into-google-sheets.png"><img alt="_images/2022-12-11_ass-8_importation-into-google-sheets.png" src="_images/2022-12-11_ass-8_importation-into-google-sheets.png" style="width: 700px;" /></a>
 <figcaption>
@@ -444,7 +444,7 @@ title="Print to PDF"
 <p class="sidebar-title">This needs some cleaning…</p>
 <p>We have yet to clean this dataset. Among other things, the VALUE column needs to be converted from object to int64.</p>
 </aside>
-<p>We can obtain similar information about a column in Google Sheets by using the “Column stats” tool found under Data &gt; Column stats. The contextual window on the right will show, among other things, the total number of rows, as well as the number of empty cells in the column.</p>
+<p>We can obtain similar information about a column in <code class="docutils literal notranslate"><span class="pre">Google</span> <span class="pre">Sheets</span></code> by using the “Column stats” tool found under Data &gt; Column stats. The contextual window on the right will show, among other things, the total number of rows, as well as the number of empty cells in the column.</p>
 <figure class="align-default" id="column-stats-empty-cells">
 <a class="reference internal image-reference" href="_images/2022-12-11_ass-8_column-stats-empty-cells.png"><img alt="_images/2022-12-11_ass-8_column-stats-empty-cells.png" src="_images/2022-12-11_ass-8_column-stats-empty-cells.png" style="width: 700px;" /></a>
 <figcaption>
@@ -489,7 +489,7 @@ title="Print to PDF"
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">Welcome to My Jupyter Book for Assignment 8</p>
+            <p class="prev-next-title">Welcome to My Jupyter Book for Ass 8</p>
         </div>
     </a>
     <a class='right-next' id="next-link" href="understanding-data-vimo.html" title="next page">
