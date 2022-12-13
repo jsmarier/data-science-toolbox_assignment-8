@@ -18,7 +18,7 @@ In this Jupyter Book, I will compare the skills and techniques I learned through
 - University of Ottawa: JOU4500 Journalisme numérique II
 - Carleton University: MPAD2003 Introductory Data Storytelling
 
-In my teaching, I loosely follow the three prong approach found in *[The Data Journalism Handbook 1: How journalists can use data to improve the news](https://datajournalism.com/read/handbook/one)*:
+In my teaching, I loosely follow the three prong approach found in *[The Data Journalism Handbook 1: How journalists can use data to improve the news](https://datajournalism.com/read/handbook/one)* by {cite:ts}`data_handbook`:
 
 1. Getting Data
 1. Understanding Data
