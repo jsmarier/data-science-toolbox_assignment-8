@@ -1,6 +1,6 @@
 # Getting Data
 
-Whether we use Python or Google Sheets, the first step of our project is to import data. For the purpose of this experiment, we will use a `CSV` version of a City of Ottawa dataset (ADD LINK TO SOURCE) listing the building, demolition, and pool enclosure permits delivered in 2021. The `CSV` file is [available here](https://raw.githubusercontent.com/jsmarier/course-datasets/main/ottawa-building-permits-2021.csv).
+Whether we use Python or Google Sheets, the first step of our project is to import data. For the purpose of this experiment, we will use a `CSV` version of a City of Ottawa dataset {cite}`openottawa` listing the building, demolition, and pool enclosure permits delivered in 2021. The `CSV` file is [available here](https://raw.githubusercontent.com/jsmarier/course-datasets/main/ottawa-building-permits-2021.csv).
 
 ## Importing the Data
 

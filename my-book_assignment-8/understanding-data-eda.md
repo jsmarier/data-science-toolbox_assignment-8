@@ -65,7 +65,7 @@ name: pandas-frequency-table
 Screen capture of the bar chart created with the code above.
 ```
 
-The bar chart seen in {numref}`pandas-frequency-table` was generate using the `Python` code above.
+The bar chart seen in {numref}`pandas-frequency-table` was generated using the `Python` code above.
 
 In comparison, creating a similar chart with Google Sheets requires the following steps:
 
