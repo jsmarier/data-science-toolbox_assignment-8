@@ -1,10 +1,18 @@
 # Welcome to JS Marier's Jupyter Book
 
+Hello! My name is Jean-Sébastien Marier. I am both a data science student, and a digital journalism instructor at the University of Ottawa and Carleton University.
+
+```{figure} images/2022-12-12_ass-8_portrait-jsmarier.jpg
+---
+width: 500px
+name: portrait-jsmarier
+---
+Portrait of Jean-Sébastien Marier.
+```
+
 This Jupyter Book is my capstone project for FS041F22O The Data Science Toolbox. This course is part of the [Key Capabilities in Data Science](https://extendedlearning.ubc.ca/programs/key-capabilities-data-science) program offered by UBC Extended Learning.
 
-In this Jupyter Book, I will compare the skills and techniques I learned throughout this program to the Google Sheets-based data analysis workflow I currently use with my own student at the University of Ottawa and Carleton University.
-
-I am currently teaching the following data-related courses:
+In this Jupyter Book, I will compare the skills and techniques I learned throughout this program to the Google Sheets-based data analysis workflow I currently use with my own student in the following data-related courses:
 
 - University of Ottawa: JOU4100 Digital Journalism II
 - University of Ottawa: JOU4500 Journalisme numérique II
