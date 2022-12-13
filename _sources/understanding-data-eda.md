@@ -12,11 +12,17 @@ permits_grouped = permits.groupby("WARD").count()
 permits_grouped
 ```
 
-The code above generates a new table featuring the number of non=null (non empty) cells for each column, grouped by wards. Here's what the first 10 rows of this table look like:
+The code above generates a new table featuring the number of non=null (non empty) cells for each column, grouped by wards.
 
-![Screen capture of the permits dataset grouped by wards.](images/2022-12-11_ass-8_groupby-ward-pandas.png)
+```{figure} images/2022-12-11_ass-8_groupby-ward-pandas.png
+---
+width: 500px
+name: groupby-ward-pandas
+---
+Screen capture of the permits dataset grouped by wards.
+```
 
-FIGURE TO ADD
+{numref}`groupby-ward-pandas` shows the first 10 rows of the table.
 
 ```{margin} As previously mentioned, this dataset requires some cleaning, which falls outside the scope of this assignment. Therefore, the figures presented here include duplicate rows and are only shown as a demonstration of my current skills.
 ```
@@ -25,9 +31,13 @@ Given the previously mentioned "parsing" error, I am unable to group my variable
 
 This is actually something rather easy to do with Google Sheets's Pivot Table tool. Simply select the entire dataset and click on Insert > Pivot table. Then, put `WARD` under the rows, `BLG TYPE` under the columns, and `BLG TYPE`, summarized by COUNTA, under values.
 
-![Screen capture of the pivot table in Google Sheets, showing the number of projects involving each type of building in each ward.](images/2022-12-11_ass-8_pivot-table.png).
-
-FIGURE TO ADD
+```{figure} images/2022-12-11_ass-8_pivot-table.png
+---
+width: 500px
+name: pivot-table
+---
+Screen capture of the pivot table in Google Sheets, showing the number of projects involving each type of building in each ward.
+```
 
 :::{admonition} Who's the winner?
 :class: tip, dropdown
@@ -47,9 +57,15 @@ alt.Chart(permits, width=500, height=400).mark_bar().encode(
     y=alt.Y('count()', title="Number of Projects"))
 ```
 
-![Screen capture of the bar chart created with the code above.](images/2022-12-11_ass-8_pandas-frequency-table.png)
+```{figure} images/2022-12-11_ass-8_pandas-frequency-table.png
+---
+width: 500px
+name: pandas-frequency-table
+---
+Screen capture of the bar chart created with the code above.
+```
 
-ADD FIGURE CAPTION
+The bar chart seen in {numref}`pandas-frequency-table` was generate using the `Python` code above.
 
 In comparison, creating a similar chart with Google Sheets requires the following steps:
 
@@ -64,9 +80,13 @@ In comparison, creating a similar chart with Google Sheets requires the followin
 
 And here's the result:
 
-![Screen capture of the bar chart created with Google Sheets.](images/2022-12-11_ass-8_google-sheets-chart.png)
-
-FIGCAPTION TO ADD
+```{figure} images/2022-12-11_ass-8_google-sheets-chart.png
+---
+width: 500px
+name: google-sheets-chart
+---
+Screen capture of the bar chart created with Google Sheets.
+```
 
 The level of difficulty here is similar to Altair's. Moreover, both tools allow us to download a PNG or SVP copy of the chart by clicking on the three little dots in the top right corner.
 
