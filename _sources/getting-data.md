@@ -14,9 +14,15 @@ permits = pd.read_csv('https://raw.githubusercontent.com/jsmarier/course-dataset
 permits.head()
 ```
 
-![Screen capture of the first five rows of the permits dataset after importation.](images/2022-12-11_ass-8_head-of-permits-dataset.png)
+```{figure} images/2022-12-11_ass-8_head-of-permits-dataset.png
+ ---
+ width: 500px
+ name: head-of-permits-dataset
+ ---
+Screen capture of the first five rows of the permits dataset after importation.
+ ```
 
-FIG: TO BE ADDED
+The screen capture shown in {numref}`head-of-permits-dataset` shows the output of the `Python` code. 
 
 ```{note}
 Since this page was created in the Markdown (.md) format, the code above is static. However, we will run the same code in our Understanding Data: VIMO Analysis and Delivering Data Jupyter Notebooks.
@@ -30,9 +36,13 @@ Let's now see what we need to do to complete the same steps in Google Sheets. Th
 
 However, this function does not work with larger files. In this case, we need to first download the `CSV` to our hard drive. Then, in Google Sheets, we click on File > Import. When the "Import file" window appears, we select "Upload." Then, we upload our CSV, making sure to select the appropriate value separator. Here's what the dataset looks like in Google Sheets right after importation.
 
-![Screen capture of the dataset right after being imported into Google Sheets.](images/2022-12-11_ass-8_importation-into-google-sheets.png)
-
-FIG: TO BE ADDED
+```{figure} images/2022-12-11_ass-8_importation-into-google-sheets.png
+ ---
+ width: 500px
+ name: importation-into-google-sheets
+ ---
+Screen capture of the dataset right after being imported into Google Sheets.
+ ```
 
 ## Obtaining Summary Information About the Dataset
 
@@ -42,9 +52,15 @@ We can easily get more information about the different columns in our dataset by
 permits.info()
 ```
 
-![Screen capture of the summary table showing, among other things, the number of non-null values.](images/2022-12-11_ass-8_permits-info.png)
+```{figure} images/2022-12-11_ass-8_permits-info.png
+ ---
+ width: 500px
+ name: permits-info
+ ---
+Screen capture of the summary table showing, among other things, the number of non-null values.
+ ```
 
-FIG: The .info() function returned a table showing the number of non-null values in each column, as well as the type of variable of each column.
+As seen in {numref}`permits-info`, the `.info() function` returned a table showing the number of non-null values in each column, as well as the type of variable of each column.
 
 ```{margin} This needs some cleaning...
 We have yet to clean this dataset. Among other things, the VALUE column needs to be converted from object to int64.
@@ -52,9 +68,13 @@ We have yet to clean this dataset. Among other things, the VALUE column needs to
 
 We can obtain similar information about a column in Google Sheets by using the "Column stats" tool found under Data > Column stats. The contextual window on the right will show, among other things, the total number of rows, as well as the number of empty cells in the column.
 
-![Screen capture of the column stats window showing that there are two empty cells under the FT2 column.](images/2022-12-11_ass-8_column-stats-empty-cells.png)
-
-FIG: TO BE ADDED
+```{figure} images/2022-12-11_ass-8_column-stats-empty-cells.png
+ ---
+ width: 500px
+ name: column-stats-empty-cells
+ ---
+Screen capture of the column stats window showing that there are two empty cells under the FT2 column.
+ ```
 
 :::{admonition} Who's the winner?
 :class: tip, dropdown

@@ -336,8 +336,32 @@ title="Print to PDF"
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#width-500px-name-head-of-permits-dataset">
+   width: 500px
+name: head-of-permits-dataset
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#width-500px-name-importation-into-google-sheets">
+   width: 500px
+name: importation-into-google-sheets
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#obtaining-summary-information-about-the-dataset">
    Obtaining Summary Information About the Dataset
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#width-500px-name-permits-info">
+   width: 500px
+name: permits-info
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#width-500px-name-column-stats-empty-cells">
+   width: 500px
+name: column-stats-empty-cells
   </a>
  </li>
 </ul>
@@ -365,8 +389,32 @@ title="Print to PDF"
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#width-500px-name-head-of-permits-dataset">
+   width: 500px
+name: head-of-permits-dataset
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#width-500px-name-importation-into-google-sheets">
+   width: 500px
+name: importation-into-google-sheets
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#obtaining-summary-information-about-the-dataset">
    Obtaining Summary Information About the Dataset
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#width-500px-name-permits-info">
+   width: 500px
+name: permits-info
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#width-500px-name-column-stats-empty-cells">
+   width: 500px
+name: column-stats-empty-cells
   </a>
  </li>
 </ul>
@@ -392,8 +440,10 @@ title="Print to PDF"
 <span class="n">permits</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
 </pre></div>
 </div>
-<p><img alt="Screen capture of the first five rows of the permits dataset after importation." src="_images/2022-12-11_ass-8_head-of-permits-dataset.png" /></p>
-<p>FIG: TO BE ADDED</p>
+<figure class="align-default">
+<img alt="_images/2022-12-11_ass-8_head-of-permits-dataset.png" src="_images/2022-12-11_ass-8_head-of-permits-dataset.png" />
+</figure>
+<p>The screen capture shown in <code class="xref std std-numref docutils literal notranslate"><span class="pre">head-of-permits-dataset</span></code> shows the output of the <code class="docutils literal notranslate"><span class="pre">Python</span></code> code.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>Since this page was created in the Markdown (.md) format, the code above is static. However, we will run the same code in our Understanding Data: VIMO Analysis and Delivering Data Jupyter Notebooks.</p>
@@ -403,8 +453,19 @@ title="Print to PDF"
 </pre></div>
 </div>
 <p>However, this function does not work with larger files. In this case, we need to first download the <code class="docutils literal notranslate"><span class="pre">CSV</span></code> to our hard drive. Then, in Google Sheets, we click on File &gt; Import. When the “Import file” window appears, we select “Upload.” Then, we upload our CSV, making sure to select the appropriate value separator. Here’s what the dataset looks like in Google Sheets right after importation.</p>
-<p><img alt="Screen capture of the dataset right after being imported into Google Sheets." src="_images/2022-12-11_ass-8_importation-into-google-sheets.png" /></p>
-<p>FIG: TO BE ADDED</p>
+<figure class="align-default">
+<img alt="_images/2022-12-11_ass-8_importation-into-google-sheets.png" src="_images/2022-12-11_ass-8_importation-into-google-sheets.png" />
+</figure>
+</section>
+<section id="width-500px-name-head-of-permits-dataset">
+<h2>width: 500px
+name: head-of-permits-dataset<a class="headerlink" href="#width-500px-name-head-of-permits-dataset" title="Permalink to this headline">#</a></h2>
+<p>Screen capture of the first five rows of the permits dataset after importation.</p>
+</section>
+<section id="width-500px-name-importation-into-google-sheets">
+<h2>width: 500px
+name: importation-into-google-sheets<a class="headerlink" href="#width-500px-name-importation-into-google-sheets" title="Permalink to this headline">#</a></h2>
+<p>Screen capture of the dataset right after being imported into Google Sheets.</p>
 </section>
 <section id="obtaining-summary-information-about-the-dataset">
 <h2>Obtaining Summary Information About the Dataset<a class="headerlink" href="#obtaining-summary-information-about-the-dataset" title="Permalink to this headline">#</a></h2>
@@ -412,19 +473,32 @@ title="Print to PDF"
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">permits</span><span class="o">.</span><span class="n">info</span><span class="p">()</span>
 </pre></div>
 </div>
-<p><img alt="Screen capture of the summary table showing, among other things, the number of non-null values." src="_images/2022-12-11_ass-8_permits-info.png" /></p>
-<p>FIG: The .info() function returned a table showing the number of non-null values in each column, as well as the type of variable of each column.</p>
+<figure class="align-default">
+<img alt="_images/2022-12-11_ass-8_permits-info.png" src="_images/2022-12-11_ass-8_permits-info.png" />
+</figure>
+<p>As seen in <code class="xref std std-numref docutils literal notranslate"><span class="pre">permits-info</span></code>, the <code class="docutils literal notranslate"><span class="pre">.info()</span> <span class="pre">function</span></code> returned a table showing the number of non-null values in each column, as well as the type of variable of each column.</p>
 <aside class="margin sidebar">
 <p class="sidebar-title">This needs some cleaning…</p>
 <p>We have yet to clean this dataset. Among other things, the VALUE column needs to be converted from object to int64.</p>
 </aside>
 <p>We can obtain similar information about a column in Google Sheets by using the “Column stats” tool found under Data &gt; Column stats. The contextual window on the right will show, among other things, the total number of rows, as well as the number of empty cells in the column.</p>
-<p><img alt="Screen capture of the column stats window showing that there are two empty cells under the FT2 column." src="_images/2022-12-11_ass-8_column-stats-empty-cells.png" /></p>
-<p>FIG: TO BE ADDED</p>
+<figure class="align-default">
+<img alt="_images/2022-12-11_ass-8_column-stats-empty-cells.png" src="_images/2022-12-11_ass-8_column-stats-empty-cells.png" />
+</figure>
 <div class="tip dropdown admonition">
 <p class="admonition-title">Who’s the winner?</p>
 <p>As we just saw here, Google Sheets is perhaps a little bit easier to use. However, Python can handle much larger files.</p>
 </div>
+</section>
+<section id="width-500px-name-permits-info">
+<h2>width: 500px
+name: permits-info<a class="headerlink" href="#width-500px-name-permits-info" title="Permalink to this headline">#</a></h2>
+<p>Screen capture of the summary table showing, among other things, the number of non-null values.</p>
+</section>
+<section id="width-500px-name-column-stats-empty-cells">
+<h2>width: 500px
+name: column-stats-empty-cells<a class="headerlink" href="#width-500px-name-column-stats-empty-cells" title="Permalink to this headline">#</a></h2>
+<p>Screen capture of the column stats window showing that there are two empty cells under the FT2 column.</p>
 </section>
 </section>
 
