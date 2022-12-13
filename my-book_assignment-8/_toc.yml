@@ -14,3 +14,6 @@ parts:
   - caption: Delivering Data
     chapters:
     - file: delivering-data
+    caption: References
+    chapters:
+    - file: bibliography
