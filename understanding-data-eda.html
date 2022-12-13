@@ -109,7 +109,7 @@ const thebe_selector_output = ".output, .cell_output"
         <ul class="nav bd-sidenav bd-sidenav__home-link">
             <li class="toctree-l1">
                 <a class="reference internal" href="intro.html">
-                    Welcome to JS Marier’s Jupyter Book
+                    Welcome to My Jupyter Book for Assignment 8
                 </a>
             </li>
         </ul>
@@ -151,6 +151,18 @@ const thebe_selector_output = ".output, .cell_output"
  <li class="toctree-l1">
   <a class="reference internal" href="delivering-data.html">
    Delivering Data
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  References
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="bibliography.html">
+   References
   </a>
  </li>
 </ul>
@@ -394,16 +406,16 @@ title="Print to PDF"
 <figure class="align-default" id="groupby-ward-pandas">
 <a class="reference internal image-reference" href="_images/2022-12-11_ass-8_groupby-ward-pandas.png"><img alt="_images/2022-12-11_ass-8_groupby-ward-pandas.png" src="_images/2022-12-11_ass-8_groupby-ward-pandas.png" style="width: 700px;" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 8 </span><span class="caption-text">Screen capture of the permits dataset grouped by wards.</span><a class="headerlink" href="#groupby-ward-pandas" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 10 </span><span class="caption-text">Screen capture of the permits dataset grouped by wards.</span><a class="headerlink" href="#groupby-ward-pandas" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
-<p><a class="reference internal" href="#groupby-ward-pandas"><span class="std std-numref">Fig. 8</span></a> shows the first 10 rows of the table.</p>
+<p><a class="reference internal" href="#groupby-ward-pandas"><span class="std std-numref">Fig. 10</span></a> shows the first 10 rows of the table.</p>
 <p>Given the previously mentioned “parsing” error, I am unable to group my variables by other columns, such as VALUE, BLG TYPE (building type), etc. This would be useful, for example, to calculate the number of projects involving each building type (single family home, retail, industrial, rowhouse, etc.) in each ward.</p>
 <p>This is actually something rather easy to do with Google Sheets’s Pivot Table tool. Simply select the entire dataset and click on Insert &gt; Pivot table. Then, put <code class="docutils literal notranslate"><span class="pre">WARD</span></code> under the rows, <code class="docutils literal notranslate"><span class="pre">BLG</span> <span class="pre">TYPE</span></code> under the columns, and <code class="docutils literal notranslate"><span class="pre">BLG</span> <span class="pre">TYPE</span></code>, summarized by COUNTA, under values.</p>
 <figure class="align-default" id="pivot-table">
 <a class="reference internal image-reference" href="_images/2022-12-11_ass-8_pivot-table.png"><img alt="_images/2022-12-11_ass-8_pivot-table.png" src="_images/2022-12-11_ass-8_pivot-table.png" style="width: 700px;" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 9 </span><span class="caption-text">Screen capture of the pivot table in Google Sheets, showing the number of projects involving each type of building in each ward.</span><a class="headerlink" href="#pivot-table" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 11 </span><span class="caption-text">Screen capture of the pivot table in Google Sheets, showing the number of projects involving each type of building in each ward.</span><a class="headerlink" href="#pivot-table" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
 <div class="tip dropdown admonition">
@@ -425,10 +437,10 @@ title="Print to PDF"
 <figure class="align-default" id="pandas-frequency-table">
 <a class="reference internal image-reference" href="_images/2022-12-11_ass-8_pandas-frequency-table.png"><img alt="_images/2022-12-11_ass-8_pandas-frequency-table.png" src="_images/2022-12-11_ass-8_pandas-frequency-table.png" style="width: 700px;" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 10 </span><span class="caption-text">Screen capture of the bar chart created with the code above.</span><a class="headerlink" href="#pandas-frequency-table" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 12 </span><span class="caption-text">Screen capture of the bar chart created with the code above.</span><a class="headerlink" href="#pandas-frequency-table" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
-<p>The bar chart seen in <a class="reference internal" href="#pandas-frequency-table"><span class="std std-numref">Fig. 10</span></a> was generate using the <code class="docutils literal notranslate"><span class="pre">Python</span></code> code above.</p>
+<p>The bar chart seen in <a class="reference internal" href="#pandas-frequency-table"><span class="std std-numref">Fig. 12</span></a> was generated using the <code class="docutils literal notranslate"><span class="pre">Python</span></code> code above.</p>
 <p>In comparison, creating a similar chart with Google Sheets requires the following steps:</p>
 <ol class="simple">
 <li><p>Select D column</p></li>
@@ -444,7 +456,7 @@ title="Print to PDF"
 <figure class="align-default" id="google-sheets-chart">
 <a class="reference internal image-reference" href="_images/2022-12-11_ass-8_google-sheets-chart.png"><img alt="_images/2022-12-11_ass-8_google-sheets-chart.png" src="_images/2022-12-11_ass-8_google-sheets-chart.png" style="width: 700px;" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 11 </span><span class="caption-text">Screen capture of the bar chart created with Google Sheets.</span><a class="headerlink" href="#google-sheets-chart" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 13 </span><span class="caption-text">Screen capture of the bar chart created with Google Sheets.</span><a class="headerlink" href="#google-sheets-chart" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
 <p>The level of difficulty here is similar to Altair’s. Moreover, both tools allow us to download a PNG or SVP copy of the chart by clicking on the three little dots in the top right corner.</p>
