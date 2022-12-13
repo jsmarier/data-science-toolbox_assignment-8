@@ -1,6 +1,6 @@
-# Welcome to My Jupyter Book for Assignment 8
+# Welcome to My Jupyter Book for Ass 8
 
-Hello! My name is Jean-Sébastien Marier. I am both a data science student, and a digital journalism instructor at the University of Ottawa and Carleton University.
+Hello! My name is Jean-Sébastien Marier. I am both a data science student through UBC Extended Learning, and a digital journalism instructor at the University of Ottawa and Carleton University.
 
 ```{figure} images/2022-12-12_ass-8_portrait-jsmarier.jpg
 ---
@@ -10,9 +10,9 @@ name: portrait-jsmarier
 Portrait of Jean-Sébastien Marier.
 ```
 
-This Jupyter Book is my capstone project for FS041F22O The Data Science Toolbox {cite}`data_toolbox`. This course is part of the [Key Capabilities in Data Science](https://extendedlearning.ubc.ca/programs/key-capabilities-data-science) program offered by UBC Extended Learning.
+This `Jupyter Book` is my capstone project for FS041F22O The Data Science Toolbox {cite}`data_toolbox`. This course is part of the [Key Capabilities in Data Science](https://extendedlearning.ubc.ca/programs/key-capabilities-data-science) program offered by UBC Extended Learning.
 
-In this Jupyter Book, I will compare the skills and techniques I learned throughout this program to the Google Sheets-based data analysis workflow I currently use with my own students in the following data-related courses:
+In this `Jupyter Book`, I will compare the skills and techniques I learned throughout this program to the Google Sheets-based data analysis workflow I currently use with my own students in the following data-related courses:
 
 - University of Ottawa: JOU4100 Digital Journalism II
 - University of Ottawa: JOU4500 Journalisme numérique II
@@ -24,7 +24,7 @@ In my teaching, I loosely follow the three-prong approach found in *The Data Jou
 1. Understanding Data
 1. Delivering Data
 
-In the following pages, I will demonstrate how my new Python and data science skills measure up against the Google-Sheets workflow I use for each of these steps. For this "proof of concept," I will use the same dataset I assigned to my students a few weeks ago for their data analysis project.
+In the following pages, I will demonstrate how my new Python and data science skills measure up against the `Google-Sheets` workflow I use for each of these steps. For this "proof of concept," I will use the same dataset I assigned to my students a few weeks ago for their data analysis project.
 
 **Disclaimer:** Throughout this assignment, I reused and customized chunks of code from some of my previous final projects for this program, as well as techniques taught in the various modules of all four courses offered through the program.
 
