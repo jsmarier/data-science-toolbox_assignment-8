@@ -16,7 +16,7 @@ The code above generates a new table featuring the number of non=null (non empty
 
 ```{figure} images/2022-12-11_ass-8_groupby-ward-pandas.png
 ---
-width: 500px
+width: 700px
 name: groupby-ward-pandas
 ---
 Screen capture of the permits dataset grouped by wards.
@@ -33,7 +33,7 @@ This is actually something rather easy to do with Google Sheets's Pivot Table to
 
 ```{figure} images/2022-12-11_ass-8_pivot-table.png
 ---
-width: 500px
+width: 700px
 name: pivot-table
 ---
 Screen capture of the pivot table in Google Sheets, showing the number of projects involving each type of building in each ward.
@@ -59,7 +59,7 @@ alt.Chart(permits, width=500, height=400).mark_bar().encode(
 
 ```{figure} images/2022-12-11_ass-8_pandas-frequency-table.png
 ---
-width: 500px
+width: 700px
 name: pandas-frequency-table
 ---
 Screen capture of the bar chart created with the code above.
@@ -82,7 +82,7 @@ And here's the result:
 
 ```{figure} images/2022-12-11_ass-8_google-sheets-chart.png
 ---
-width: 500px
+width: 700px
 name: google-sheets-chart
 ---
 Screen capture of the bar chart created with Google Sheets.
