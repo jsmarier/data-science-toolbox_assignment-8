@@ -16,7 +16,7 @@ permits.head()
 
 ```{figure} images/2022-12-11_ass-8_head-permits-dataset.png
 ---
-width: 500px
+width: 700px
 name: head-of-permits-dataset
 ---
 Screen capture of the first five rows of the permits dataset after importation.
@@ -38,7 +38,7 @@ However, this function does not work with larger files. In this case, we need to
 
 ```{figure} images/2022-12-11_ass-8_importation-into-google-sheets.png
 ---
-width: 500px
+width: 700px
 name: importation-into-google-sheets
 ---
 Screen capture of the dataset right after being imported into Google Sheets.
@@ -54,7 +54,7 @@ permits.info()
 
 ```{figure} images/2022-12-11_ass-8_permits-info.png
 ---
-width: 500px
+width: 700px
 name: permits-info
 ---
 Screen capture of the summary table showing, among other things, the number of non-null values.
@@ -70,7 +70,7 @@ We can obtain similar information about a column in Google Sheets by using the "
 
 ```{figure} images/2022-12-11_ass-8_column-stats-empty-cells.png
 ---
-width: 500px
+width: 700px
 name: column-stats-empty-cells
 ---
 Screen capture of the column stats window showing that there are two empty cells under the FT2 column.
