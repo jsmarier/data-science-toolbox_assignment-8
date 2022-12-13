@@ -24,7 +24,8 @@ Screen capture of the permits dataset grouped by wards.
 
 {numref}`groupby-ward-pandas` shows the first 10 rows of the table.
 
-```{margin} As previously mentioned, this dataset requires some cleaning, which falls outside the scope of this assignment. Therefore, the figures presented here include duplicate rows and are only shown as a demonstration of my current skills.
+```{margin} A messy dataset...
+As previously mentioned, this dataset requires some cleaning, which falls outside the scope of this assignment. Therefore, the figures presented here include duplicate rows and are only shown as a demonstration of my current skills.
 ```
 
 Given the previously mentioned "parsing" error, I am unable to group my variables by other columns, such as VALUE, BLG TYPE (building type), etc. This would be useful, for example, to calculate the number of projects involving each building type (single family home, retail, industrial, rowhouse, etc.) in each ward.
