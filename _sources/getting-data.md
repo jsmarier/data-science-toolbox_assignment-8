@@ -14,7 +14,7 @@ permits = pd.read_csv('https://raw.githubusercontent.com/jsmarier/course-dataset
 permits.head()
 ```
 
-```{figure} images/2022-12-11_ass-8_head-of-permits-dataset.png
+```{figure} images/2022-12-11_ass-8_head-permits-dataset.png
  ---
  width: 500px
  name: head-of-permits-dataset
