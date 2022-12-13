@@ -22,14 +22,6 @@ name: head-of-permits-dataset
 Screen capture of the first five rows of the permits dataset after importation.
 ```
 
-```{figure} ../images/2022-12-11_ass-8_head-permits-dataset.png
----
-height: 150px
-name: directive-fig
----
-Here is my figure caption!
-```
-
 The screen capture shown in {numref}`head-of-permits-dataset` shows the output of the `Python` code. 
 
 ```{note}
